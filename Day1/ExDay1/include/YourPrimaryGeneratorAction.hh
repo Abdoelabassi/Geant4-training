@@ -24,7 +24,7 @@ class YourPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
   private:  // Data member declarations
 
-     G4ParticleGun* fParticleGun = nullptr;
+     G4ParticleGun* fParticleGun = 0;
 };
 
 #endif

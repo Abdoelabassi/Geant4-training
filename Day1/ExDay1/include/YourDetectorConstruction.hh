@@ -27,7 +27,7 @@ class YourDetectorConstruction : public G4VUserDetectorConstruction
   private:  // Data members
 
     // The pointer to the target physical volume
-    G4VPhysicalVolume* fTargetPhysical = nullptr;
+    G4VPhysicalVolume* fTargetPhysical = 0;
 };
 
 #endif

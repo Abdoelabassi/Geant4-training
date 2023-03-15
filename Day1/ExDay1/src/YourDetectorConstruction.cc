@@ -61,11 +61,11 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct()
                                  materialWorld,  // material
                                  "logic-World"); // name
     G4VPhysicalVolume* worldPhysical
-           = new G4PVPlacement(nullptr,                 // (no) rotation
+           = new G4PVPlacement(0,                 // (no) rotation
                                G4ThreeVector(0.,0.,0.), // translation
                                worldLogical,            // its logical volume
                                "World",                 // its name
-                               nullptr,                 // its mother volume
+                               0,                       // its mother volume
                                false,                   // not used
                                0);                      // copy number
 
