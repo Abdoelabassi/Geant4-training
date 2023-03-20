@@ -40,7 +40,7 @@
 #include "G4LogicalVolume.hh"
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
-
+#include "G4Element.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 B1DetectorConstruction::B1DetectorConstruction()
@@ -63,8 +63,14 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
   // Envelope parameters
   //
   G4double env_sizeXY = 20*cm, env_sizeZ = 30*cm;
-  G4Material* env_mat = nist->FindOrBuildMaterial("G4_WATER");
-   
+  G4Material* env_mat = nist->FindOrBuildMaterial("lAr");
+  G4cout << env_mat << G4endl; 
+  // An other code to create water molecule
+  G4Element* H = new G4Element("Hydrogen", "H", 1.0,1.0*g/mole);
+  G4Element* O = new G4Element("Oxygen", "O", 8.00, 16.0*g/mole);
+  G4Material* HO = new G4Material("Water", 1.0*g/cm3,2);
+  HO->AddElement(H, 2);
+  HO->AddElement(O, 1);
   // Option to switch on/off checking of volumes overlaps
   //
   G4bool checkOverlaps = true;
@@ -104,7 +110,7 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
       
   G4LogicalVolume* logicEnv =                         
     new G4LogicalVolume(solidEnv,            //its solid
-                        env_mat,             //its material
+                        HO,             //its material
                         "Envelope");         //its name
                
   new G4PVPlacement(0,                       //no rotation
