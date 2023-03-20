@@ -1,7 +1,7 @@
 CMakeFiles/exampleB1.dir/src/B1PrimaryGeneratorAction.cc.o: \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/src/B1PrimaryGeneratorAction.cc \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/src/B1PrimaryGeneratorAction.cc \
  /usr/include/stdc-predef.h \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1PrimaryGeneratorAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1PrimaryGeneratorAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ParticleGun.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \

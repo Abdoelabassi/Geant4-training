@@ -1,9 +1,9 @@
 CMakeFiles/exampleB1.dir/src/B1ActionInitialization.cc.o: \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/src/B1ActionInitialization.cc \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/src/B1ActionInitialization.cc \
  /usr/include/stdc-predef.h \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1ActionInitialization.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1ActionInitialization.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4VUserActionInitialization.hh \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1PrimaryGeneratorAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1PrimaryGeneratorAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ParticleGun.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \
@@ -190,9 +190,9 @@ CMakeFiles/exampleB1.dir/src/B1ActionInitialization.cc.o: \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4PrimaryParticle.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ParticleMomentum.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1RunAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1RunAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4UserRunAction.hh \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1EventAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1EventAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4UserEventAction.hh \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1SteppingAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1SteppingAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4UserSteppingAction.hh

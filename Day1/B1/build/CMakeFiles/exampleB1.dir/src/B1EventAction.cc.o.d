@@ -1,7 +1,7 @@
 CMakeFiles/exampleB1.dir/src/B1EventAction.cc.o: \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/src/B1EventAction.cc \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/src/B1EventAction.cc \
  /usr/include/stdc-predef.h \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1EventAction.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1EventAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4UserEventAction.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ios.hh \
@@ -156,7 +156,7 @@ CMakeFiles/exampleB1.dir/src/B1EventAction.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ExceptionSeverity.hh \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1Run.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1Run.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4Run.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \

@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1
+CMAKE_SOURCE_DIR = /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/build
+CMAKE_BINARY_DIR = /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/build
 
 # Utility rule file for B1.
 
@@ -81,6 +81,6 @@ CMakeFiles/B1.dir/clean:
 .PHONY : CMakeFiles/B1.dir/clean
 
 CMakeFiles/B1.dir/depend:
-	cd /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1 /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1 /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/build /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/build /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/build/CMakeFiles/B1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1 /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1 /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/build /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/build /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/build/CMakeFiles/B1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/B1.dir/depend
 

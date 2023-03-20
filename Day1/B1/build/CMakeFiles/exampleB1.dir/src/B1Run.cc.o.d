@@ -1,7 +1,7 @@
 CMakeFiles/exampleB1.dir/src/B1Run.cc.o: \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/src/B1Run.cc \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/src/B1Run.cc \
  /usr/include/stdc-predef.h \
- /home/aelabass/Documents/Hep-exp/Geant4Course/day1/B1/include/B1Run.hh \
+ /home/aelabass/Documents/Hep-exp/Geant4Course/Day1/B1/include/B1Run.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4Run.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/globals.hh \
  /home/aelabass/Documents/HyperK/Geant4/source/4.10.01.p03-install/include/Geant4/G4ios.hh \
