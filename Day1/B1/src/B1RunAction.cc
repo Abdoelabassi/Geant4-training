@@ -75,6 +75,7 @@ void B1RunAction::BeginOfRunAction(const G4Run*)
 {
   //inform the runManager to save random number seed
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
+
   if(IsMaster()){
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
   }

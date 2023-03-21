@@ -64,22 +64,22 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
   // Envelope parameters
   //
   G4double env_sizeXY = 20*cm, env_sizeZ = 30*cm;
-  G4Material* env_mat = nist->FindOrBuildMaterial("G4_lAr");
+  G4Material* env_mat = nist->FindOrBuildMaterial("G4_Al");
   G4cout << env_mat << G4endl;
   // An other code to create water molecule
-  G4Element* H = new G4Element("Hydrogen", "H", 1.0,1.0*g/mole);
-  G4Element* O = new G4Element("Oxygen", "O", 8.00, 16.0*g/mole);
-  G4Material* HO = new G4Material("Water", 1.0*g/cm3,2);
-  HO->AddElement(H, 2);
-  HO->AddElement(O, 1);
+  //G4Element* H = new G4Element("Hydrogen", "H", 1.0,1.0*g/mole);
+  //G4Element* O = new G4Element("Oxygen", "O", 8.00, 16.0*g/mole);
+  //G4Material* HO = new G4Material("Water", 1.0*g/cm3,2);
+  //HO->AddElement(H, 2);
+  //HO->AddElement(O, 1);
   //Uranium using nist data
-  G4Material* natmatU = G4NistManager::Instance()->FindOrBuildMaterial("G4_U");
-  G4cout << natmatU << G4endl;
+  //G4Material* natmatU = G4NistManager::Instance()->FindOrBuildMaterial("G4_U");
+  //G4cout << natmatU << G4endl;
   //Uranium name = "Natural U mat", atomic number = 92, molar mass = 238.03*g/mole
-  G4Material* Uranium = new G4Material("Uranium", 92, 238.03*g/mole, 18.950*g/cm3);
-  G4cout << Uranium << G4endl;
+  //G4Material* Uranium = new G4Material("Uranium", 92, 238.03*g/mole, 18.950*g/cm3);
+  //G4cout << Uranium << G4endl;
   //Uranium-235 Uranium-238
-  G4Material* enrUmat = new G4Material("enriched U mat", 92, 18.95*g/cm3);
+  /*G4Material* enrUmat = new G4Material("enriched U mat", 92, 18.95*g/cm3);
   G4Isotope* U235 = new G4Isotope("U325", 92, 235);
   G4Isotope* U238 = new G4Isotope("U238", 92, 238);
   G4Element* Uenrch = new G4Element("enriched U mat", "U", 2);
@@ -90,7 +90,7 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
   enrUmat->AddElement(Uenrch,1);
 
   G4cout << enrUmat << G4endl;
-
+  */
   // Option to switch on/off checking of volumes overlaps
   //
   G4bool checkOverlaps = true;
@@ -130,7 +130,7 @@ G4VPhysicalVolume* B1DetectorConstruction::Construct()
 
   G4LogicalVolume* logicEnv =
     new G4LogicalVolume(solidEnv,            //its solid
-                        HO,             //its material
+                        env_mat,             //its material
                         "Envelope");         //its name
 
   new G4PVPlacement(0,                       //no rotation
