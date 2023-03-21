@@ -1,3 +1,0 @@
-/home/aelabass/Documents/Hep-exp/Geant4Course/day2/ExDay2/build/CMakeFiles/yourMainApplication.dir
-/home/aelabass/Documents/Hep-exp/Geant4Course/day2/ExDay2/build/CMakeFiles/edit_cache.dir
-/home/aelabass/Documents/Hep-exp/Geant4Course/day2/ExDay2/build/CMakeFiles/rebuild_cache.dir
