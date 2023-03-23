@@ -6,6 +6,7 @@ if(${CMAKE_VERSION} VERSION_LESS 3.12)
 endif()
 project(yourApplication)
 
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #----------------------------------------------------------------------------
 # Find Geant4 package, no UI and Visualization drivers activated
