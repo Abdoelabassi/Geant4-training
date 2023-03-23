@@ -3,10 +3,16 @@
 
 #include "G4Step.hh"
 
-YourSteppingAction::YourSteppingAction()
+YourSteppingAction::YourSteppingAction(const G4VPhysicalVolume* targetVol)
 :   G4UserSteppingAction()
 {
 //  3. We need to obtain and remember the Target Volume - in this constructor?
+      fTargetVol = targetVol;
+      if(targetVol != nullptr){
+        G4cout << "Your SteppingAction with target volume"
+        << target->GetName() << G4endl;
+
+      }
 }
 
 YourSteppingAction::~YourSteppingAction() {}
@@ -23,10 +29,12 @@ void YourSteppingAction::UserSteppingAction(const G4Step* theStep)
     // 1. Get the energy deposit
     //                                          Hint: look at the methods of G4Step
     G4double edep = theStep->GetTotalEnergyDeposit();       // -> CHANGE this
-    fSumEnergyDeposit += edep;
+
+
+
 
     // 2. Report it as a check -- comment this out later!
-    G4cout << " Energy deposity = " << edep << G4endl;
+    //G4cout << " Energy deposity = " << edep << G4endl;
 
     // 3. Check whether step was done inside the Target
     //
@@ -37,20 +45,30 @@ void YourSteppingAction::UserSteppingAction(const G4Step* theStep)
     //
     //  Steps:
     //  a) Fetch the current volume from G4Step or G4Track
+    G4VPhysicalVolume* currVolume =  theTrack->GetVolume();
     //  b) Make sure that the 'target' volume is given to 'Stepping Action' when it is created!
     //         ( Hint: look at the constructor in the header and above )
     //  assert( fTargetVol != nullptr );   // A check
     //  c) Compare !
-    //  d) Sum the energy only in 'target' volume (instead of all, as above)
+    if(currVolume->GetCopyNo()){
 
+
+    //  d) Sum the energy only in 'target' volume (instead of all, as above)
+    fSumChargedSteps += edep;
+  }else{
+    if( fTargetVol != nullptr){
+      G4cerr << "WARNING> Target volume is not set" << G4endl;
+    }
+  }
     // 5. Find the length of the current step
-    G4double step_length = 0.001;  // ->  CHANGE this
+    G4double step_length = theStep->GetStepLength();  // ->  CHANGE this
 
     // 6. Check whether the particle is charged
-    G4double charge = 1.0 ;       // ->  CHANGE this
+    const G4ParticleDefinition* pdef = theTrack->GetParticleDefinition();
+    G4double charge = pdef->GetPDGCharge() ;       // ->  CHANGE this
 
     // 7. Sum the length of charged steps - everywhere?
-    if( charge != 0.0)
+    if( charge != 0.0 && currVolume == fTargetVol)
     {
       fSumChargedSteps += step_length;
     }

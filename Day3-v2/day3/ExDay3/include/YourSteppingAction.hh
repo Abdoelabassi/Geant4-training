@@ -12,7 +12,7 @@ class YourSteppingAction : public G4UserSteppingAction {
   public:
 
     // --- Mandatory methods
-    YourSteppingAction();   //  CHANGE this --> Add 'target' volume as argument !
+    YourSteppingAction(const G4VPhysicalVolume* target);   //  CHANGE this --> Add 'target' volume as argument !
     virtual ~YourSteppingAction();
 
     // Virtual method called by the kernel after each step
@@ -38,7 +38,7 @@ class YourSteppingAction : public G4UserSteppingAction {
 
     double  fSumEnergyDeposit = 0.0;
     double  fSumChargedSteps  = 0.0;
-    //  Total energy deposit - in target volume   
+    //  Total energy deposit - in target volume
 };
 
 #endif
