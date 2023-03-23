@@ -19,3 +19,6 @@ C++, Geant4 toolkit, ROOT, PyROOT
 
 ![first simulation](gifs/geant4-s1.gif)
 
+# Second simulation, Mother Volume G4Box filled with galactic matter aka vaccum space, target volume is Si G4Box
+
+![sccond simulation](gifs/geant4-s2.gif)
