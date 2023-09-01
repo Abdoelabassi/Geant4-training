@@ -3,7 +3,7 @@
 #include "G4UIExecutive.hh"
 #include "G4VisExecutive.hh"
 #include "G4UImanager.hh"
-#include "include/CDetectorConstruction.hh"
+#include "CDetectorConstruction.hh"
 
 
 int main(int argc, char** argv){
