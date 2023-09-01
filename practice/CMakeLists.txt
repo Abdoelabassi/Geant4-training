@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.9 FATAL_ERROR)
 
-project(Cherenkova)
+project(C)
+
+set(CMAKE_PREFIX_PATH  /Users/mac/Documents/software/geant4-v11.0.4-install ${CMAKE_PREFIX_PATH})
 
 option(WITH_GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
 if(WITH_GEANT4_UIVIS)
@@ -19,4 +21,4 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 add_executable(cherenkova cherenkova.cc ${sources} ${headers})
 target_link_libraries(cherenkova ${Geant4_LIBRARIES})
 
-add_custom_target(Cherenkova DEPENDS cherenkova)
+add_custom_target(C DEPENDS cherenkova)
