@@ -2,15 +2,14 @@
 
 // constructor
 RunAction::RunAction()
-{
+{}
 
-}
-void RunAction::Build() const
-{
-
-}
 // destructor
 RunAction::~RunAction()
-{
+{}
 
+void RunAction::Build() const
+{
+    PrimaryGenerator* Pgenerator = new PrimaryGenerator();
+    SetUserAction(Pgenerator);
 }

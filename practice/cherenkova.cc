@@ -12,7 +12,7 @@ int main(int argc, char** argv){
     G4RunManager* runManager = new G4RunManager();
     runManager->SetUserInitialization(new DetectorConstruction());
     runManager->SetUserInitialization(new PhysicsLists());
-    runManager->SetUserInitialization(new RunAction())
+    runManager->SetUserInitialization(new RunAction());
     runManager->Initialize();
 
 
@@ -24,6 +24,8 @@ int main(int argc, char** argv){
     G4UImanager *uiManager = G4UImanager::GetUIpointer();
     uiManager->ApplyCommand("/vis/open OGL");
     uiManager->ApplyCommand("/vis/drawVolume");
+    uiManager->ApplyCommand("/vis/viewer/set/autoRefresh true");
+    uiManager->ApplyCommand("/vis/scene/add/trajectories smooth");
 
     ui->SessionStart();
 

@@ -3,13 +3,14 @@
 
 // include necessary headers
 #include "G4VUserActionInitialization.hh"
-
+#include "PrimaryGenerator.hh"
 class RunAction : public G4VUserActionInitialization
 {
-    RunAction();
-    ~RunAction();
+    public:
+        RunAction();
+        ~RunAction();
 
-    virtual void Build() const;
+        virtual void Build() const;
 
 };
 
