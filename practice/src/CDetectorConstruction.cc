@@ -30,8 +30,21 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     Aerogel->AddMaterial(SiO2, 62.5 *perCent);
     Aerogel->AddMaterial(H2O, 37.4 *perCent);
     Aerogel->AddElement(C, 0.1 *perCent);
+    // optical properties
+    G4double energy[2] = {1.239841939*eV/0.2, 1.239841939*eV/0.9};
+    G4double rindexAerogel[2] = {1.1, 1.1};
+    G4double rindexWorld[2] = {1.0, 1.0};
+
+    G4MaterialPropertiesTable* mptAergoel = new G4MaterialPropertiesTable();
+    mptAergoel->AddProperty("RINDEX", energy, rindexAerogel, 2);
+
+    Aerogel->SetMaterialPropertiesTable(mptAergoel);
+
+    G4MaterialPropertiesTable* mptWorld = new G4MaterialPropertiesTable();
+    mptWorld->AddProperty("RINDEX", energy ,rindexWorld, 2);
     // define a World material
     G4Material* worldmat = nist->FindOrBuildMaterial("G4_AIR");
+    worldmat->SetMaterialPropertiesTable(mptWorld);
     // solid world
     G4Box* solidWorld = new G4Box("solidworld", 0.5*m, 0.5*m, 0.5*m);
 
@@ -67,6 +80,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
         true
 
     );
+    
 
     return phyworld;
 

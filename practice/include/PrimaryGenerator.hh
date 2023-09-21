@@ -7,12 +7,15 @@
 #include "G4SystemOfUnits.hh"
 #include "G4ParticleTable.hh"
 #include "G4ParticleDefinition.hh"
+#include "G4Event.hh"
 
 class PrimaryGenerator : public G4VUserPrimaryGeneratorAction
 {
     public:
         PrimaryGenerator();
         ~PrimaryGenerator();
+
+        
     
         virtual void GeneratePrimaries(G4Event*);
 
