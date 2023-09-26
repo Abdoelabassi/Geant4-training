@@ -54,6 +54,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4Box* solidRadiator = new G4Box("solidRadiator", 0.4*m, 0.4*m, 0.01*m);
     G4LogicalVolume* logicalRadiator = new G4LogicalVolume(solidRadiator, Aerogel, "LogicalRadiator");
 
+    // Sensitive detector
+    
 
 
     // physical volume for air
