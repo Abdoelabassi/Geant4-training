@@ -1,0 +1,17 @@
+#!/bin/sh
+
+bin_dir=/Users/mac/Documents/software/geant4-v11.0.4-install/bin/
+share-dir=
+
+cd $bin_dir && source geant4.sh
+
+echo "Next...."
+
+cd $share_dir  && source geant4make.sh
+
+echo "Geant4 ready to use....Happy coding!"
+
+cd /Users/mac/Documents/research/geant4-training/Geant4-training/practice
+
+echo "back to the working directory...."
+
