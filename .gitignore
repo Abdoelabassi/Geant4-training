@@ -1,3 +1,4 @@
 .vscode/
 /build/
 **/build/
+setup_geant4.sh
