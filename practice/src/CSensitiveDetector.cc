@@ -1,4 +1,8 @@
 #include "CSensitiveDetector.hh"
+#include "G4RunManager.hh"
+
+
+
 
 CSensitiveDetector::CSensitiveDetector(G4String detector_name)
 :G4VSensitiveDetector(detector_name)
@@ -33,5 +37,16 @@ G4bool CSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* histor
     G4ThreeVector posDetector = phyvol->GetTranslation();
 
     G4cout << "detector position: " << posDetector << G4endl;
+
+    // fill the ntuple
+    G4AnalysisManager* analysis = G4AnalysisManager::Instance();
+
+    G4int event_number = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+    analysis->FillNtupleIColumn(0, event_number);
+    analysis->FillNtupleDColumn(1, posDetector[0]);
+    analysis->FillNtupleDColumn(2, posDetector[1]);
+    analysis->FillNtupleDColumn(3, posDetector[3]);
+    analysis->AddNtupleRow(0);
 }
 
