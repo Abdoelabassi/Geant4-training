@@ -1,18 +1,18 @@
 #ifndef RUNACTION_HH
 #define RUNACTION_HH
 
-// include necessary headers
-#include "G4VUserActionInitialization.hh"
-#include "PrimaryGenerator.hh"
-class RunAction : public G4VUserActionInitialization
+
+#include "G4UserRunAction.hh"
+#include "G4AnalysisManager.hh"
+
+class RunAction : public G4UserRunAction
 {
     public:
         RunAction();
         ~RunAction();
 
-        virtual void Build() const;
-
+        virtual void BeginOfRunAction(const G4Run*);
+        virtual void EndOfRunAction(const G4Run*);
 };
-
 
 #endif

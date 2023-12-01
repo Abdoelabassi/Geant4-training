@@ -5,7 +5,7 @@
 #include "G4UImanager.hh"
 #include "CDetectorConstruction.hh"
 #include "PhysicsList.hh"
-#include "RunAction.hh"
+#include "Action.hh"
 #include "PrimaryGenerator.hh"
 
 int main(int argc, char** argv){
@@ -14,7 +14,7 @@ int main(int argc, char** argv){
     G4RunManager* runManager = new G4RunManager();
     runManager->SetUserInitialization(new DetectorConstruction());
     runManager->SetUserInitialization(new PhysicsLists());
-    runManager->SetUserInitialization(new RunAction());
+    runManager->SetUserInitialization(new Action());
     
 
     // user run action
