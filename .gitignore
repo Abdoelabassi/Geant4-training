@@ -3,3 +3,7 @@
 **/build/
 setup_geant4.sh
 *.sh
+.DS_Store
+**/.DS_Store
+*/.DS_Store
+***/.DS_Store
