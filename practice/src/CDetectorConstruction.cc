@@ -109,3 +109,9 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
 
 }
+
+void DetectorConstruction::ConstructSDandField()
+{
+    CSensitiveDetector* senDet = new CSensitiveDetector("sensitiveDetector");
+    logicalDetector->SetSensitiveDetector(senDet);
+}

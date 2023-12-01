@@ -10,8 +10,7 @@
 #include "G4Element.hh"
 #include "G4Box.hh"
 #include "G4PVPlacement.hh"
-
-
+#include "CSensitiveDetector.hh"
 
 
 class DetectorConstruction: public G4VUserDetectorConstruction
@@ -24,6 +23,8 @@ class DetectorConstruction: public G4VUserDetectorConstruction
 
     private:
         G4LogicalVolume* logicalDetector;
+        virtual void ConstructSDandField();
+
 };
 
 
