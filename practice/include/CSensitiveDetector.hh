@@ -12,7 +12,8 @@ class CSensitiveDetector : public G4VSensitiveDetector
         CSensitiveDetector(G4String);
         ~CSensitiveDetector();
     private:
-        virtual G4bool ProcessHits(G4Step*, G4TouchableHandle*);
+        virtual G4bool ProcessHits(G4Step*, G4TouchableHistory*);
+        virtual void ConstructSDandField();
 };
 
 #endif
